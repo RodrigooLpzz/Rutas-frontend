@@ -11,6 +11,7 @@ export default function Alumno({alumno}){
           </td>
           <td>{alumno.apellido}</td>
           <td>{alumno.carrera}</td>
+          <td className={alumno.calificacion < 70 ? "invisible" : ""}>{alumno.calificacion}</td>
         </tr>
       
     )
