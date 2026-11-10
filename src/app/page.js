@@ -2,76 +2,11 @@
 "use client";
 import {  useState } from "react";
 import Alumno from "./alumno";
+import { alumnos } from "./datos";
 
 export default function Home() {
   const [mensaje, setMensaje] = useState('');
   const [busqueda, setBusqueda] = useState('');
-  
-  let alumnos = [
-    {
-      nombre: "Carlos Hector", 
-      apellido: "Leal Delgado",
-      carrera: "LCC",
-      activo : true,
-      calificacion: 85
-    },
-    {
-      nombre: "Alexis Felipe",
-      apellido: "Elorza Obregon",
-      carrera: "LCC",
-      activo : false,
-      calificacion: 65
-    },
-    {
-      nombre: "Axel Gabriel",
-      apellido: "Gutierrez Ruano",
-      carrera: "LCC",
-      activo: true,
-      calificacion: 92
-    },
-    {
-      nombre: "Eder Abraham",
-      apellido: "Sampayo Gonzalez",
-      carrera: "LCC",
-      activo: true,
-      calificacion: 78
-    },
-    {
-      nombre: "Edgar Aurelio",
-      apellido: "Santiago Santiago",
-      carrera: "LCC",
-      activo: false,
-      calificacion: 54
-    },
-    {
-      nombre: "Carlos Hector", 
-      apellido: "De Leon Saucedo",
-      carrera: "LCC",
-      activo: true,
-      calificacion: 95
-    },
-    {
-      nombre: "Mayela Mayte",
-      apellido: "Lopez Cerino",
-      carrera: "LCC",
-      activo: false,
-      calificacion: 60
-    },
-    {
-      nombre: "Rodrigo",
-      apellido: "Lopez Escobedo",
-      carrera: "LMAD",
-      activo: true,
-      calificacion: 88
-    },
-    {
-      nombre: "Emiliano",
-      apellido: "Chacon Alvarez",
-      carrera: "LCC",
-      activo: false,
-      calificacion: 70
-    }
-  ];
 
   const alumnosFiltrados = alumnos.filter((a) =>
     a.nombre.toLowerCase().includes(busqueda.toLowerCase())
